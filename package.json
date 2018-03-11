@@ -1,0 +1,39 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "Notes application",
+  "main": "index.js",
+  "scripts": {
+    "storybook": "start-storybook -p 9009",
+    "build-storybook": "build-storybook",
+    "devserver": "nodemon server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malamut42/Notes.git"
+  },
+  "author": "Dmitry Kovalkov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/malamut42/Notes/issues"
+  },
+  "homepage": "https://github.com/malamut42/Notes#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.9",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router": "^4.2.0",
+    "react-scripts": "^1.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.1",
+    "@storybook/react": "^3.3.15",
+    "@storybook/addon-actions": "^3.3.15",
+    "@storybook/addon-links": "^3.3.15",
+    "@storybook/addons": "^3.3.15",
+    "babel-core": "^6.26.0"
+  },
+  "proxy": "http://localhost:8080"
+}
