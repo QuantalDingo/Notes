@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 const config = require("../etc/config.js");
-const Note = require('../src/models/Note')
+const Note = require('../src/models/Note');
+const User = require('../src/models/User');
 
 mongoose.Promise = global.Promise;
 

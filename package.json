@@ -6,9 +6,9 @@
   "scripts": {
     "storybook": "start-storybook -p 9009",
     "build-storybook": "build-storybook",
-    "server": "nodemon server/app.js",
-    "webpack-build": "./node_modules/.bin/webpack",
-    "webpack-dev-server": "./node_modules/.bin/webpack-dev-server --mode development"
+    "start-server": "nodemon server/app.js",
+    "build": "./node_modules/.bin/webpack  --mode production",
+    "start": "./node_modules/.bin/webpack-dev-server --mode development"
   },
   "repository": {
     "type": "git",
