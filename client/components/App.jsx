@@ -1,9 +1,7 @@
 import React from 'react';
 
-class App extends React.Component {
-    render() {
-        return "Hello";
-    }
-}
+const App = () => {
+	return "Hello";
+};
 
 module.exports = App;
