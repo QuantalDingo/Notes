@@ -4,7 +4,7 @@
   "description": "Notes application",
   "main": "index.js",
   "scripts": {
-    "start-server": "nodemon server/app.js",
+    "server": "nodemon server/app.js",
     "build": "./node_modules/.bin/webpack  --mode production",
     "start": "./node_modules/.bin/webpack-dev-server --mode development"
   },
@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/malamut42/Notes#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
     "jsonwebtoken": "^8.2.0",
@@ -52,6 +54,5 @@
     "webpack-dev-middleware": "^3.0.1",
     "webpack-dev-server": "^3.1.1",
     "webpack-hot-middleware": "^2.21.2"
-  },
-  "proxy": "http://localhost:8080"
+  }
 }

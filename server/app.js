@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
@@ -10,6 +11,7 @@ mongoose.Promise = global.Promise;
 
 const app = express();
 app.use(bodyParser.json());
+app.use(cors({ origin: '*' }));
 
 const mongodb = `${config.db.db}://${config.db.host}:${config.db.port}/${config.db.table}`;
 mongoose.connect(mongodb)
@@ -27,12 +29,12 @@ app.post('/notes', (req, res) => {
 		createdAt: new Date()
 	});
 
-	newNote.save().then(data => app.send(data));
+	newNote.save().then(data => res.send(data));
 });
 
 app.delete('/notes/:id', (req, res) => {
 	Note.findById(req.params.id).remove().then(data => res.send(data));
-})
+});
 
 const server = app.listen(config.port, () => {
 	console.log(`Server is up and running on port ${config.port}`);
