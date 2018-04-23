@@ -92,4 +92,4 @@ class AddTask extends React.Component {
 	}
 }
 
-module.exports = AddTask;
+export default AddTask;

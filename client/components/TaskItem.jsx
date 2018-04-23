@@ -9,7 +9,7 @@ class TaskItem extends React.Component {
 		this.handleTaskDelete = this.handleTaskDelete.bind(this, this.props.item._id);
 	}
 
-	handleTaskDelete(id){
+	handleTaskDelete(id) {
 		axios.delete(`http://localhost:8080/notes/${id}`);
 	}
 
@@ -40,6 +40,7 @@ class TaskItem extends React.Component {
 						color: grey;
 						height: 20px;
 						width: 20px;
+						margin: 5px;
 					}
 
 					#delete-button:hover{
@@ -53,6 +54,7 @@ class TaskItem extends React.Component {
 
 					h3{
 						font-weight: 500;
+						margin-top: 0;
 					}
 				`}</style>
 			</li>
@@ -60,4 +62,4 @@ class TaskItem extends React.Component {
 	}
 }
 
-module.exports = TaskItem;
+export default TaskItem;

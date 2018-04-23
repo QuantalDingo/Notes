@@ -25,10 +25,10 @@ class App extends React.Component {
 			<div>
 				<AddTask />
 				<TaskList tasks={this.state.tasks} />
-				
+
 			</div>
 		);
 	}
 }
 
-module.exports = App;
+export default App;

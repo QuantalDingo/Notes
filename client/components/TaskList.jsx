@@ -26,4 +26,4 @@ class TaskList extends React.Component {
 	}
 }
 
-module.exports = TaskList;
+export default TaskList;
